@@ -17,3 +17,16 @@ Array.prototype.myMap = function (callbackFn, thisArg) {
 
   return array;
 };
+
+
+const arr = [];
+arr[2] = 10;
+
+console.log([1, 2, 3, 4].myMap(i => i * i)); 
+// [1, 4, 9, 16]
+
+console.log([0, false, null, ""].myMap((val, idx) => `${idx}:${val}`)); 
+// ["0:0", "1:false", "2:null", "3:"]
+
+console.log(arr.myMap(x => x * 2)); 
+// [ <2 empty items>, 20 ]
